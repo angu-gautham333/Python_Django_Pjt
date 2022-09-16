@@ -8,4 +8,5 @@ def contact(request):
 
 def result(request):
     user_input = request.GET['user_input']
-    return render(request, 'result.html')
+    user_input += " is the entered string in the Home page"
+    return render(request, 'result.html', {'home_input':user_input})
