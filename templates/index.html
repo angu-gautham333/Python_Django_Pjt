@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="csrf_token" content="{{ csrf_token }}">
+    <title></title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+  </head>
+  <body>
+    <h1>Home page</h1>
+    <a href="{% url 'contact' %}">Click to go to contact</a>
+    <p>This page needs some styling!...</p>
+    <button onclick="buttonFunc()">click me</button>
+    <img src="{% static 'tiger.jpg' %}" alt="">
+    <div class="">
+      <h1>FORMS</h1>
+      <a href="{% url 'result' %}">Click here to go to the results</a>
+    </div>
+    <form action="{% url 'result' %}" method="post">
+      <input type="text" name="user_input">
+      <input type="submit" value="Click Me">
+    </form>
+
+    <script type="text/javascript" src = "{% static 'main.js' %}"></script>
+  </body>
+</html>
